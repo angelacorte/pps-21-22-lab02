@@ -8,8 +8,8 @@ object Es3 extends App:
       case 0 => "Even"
       case 1 => "Odd"
 
-  def intToString(x: Int): String = x match
-    case x if x%2 == 0 => "Even"
+  def intToString(x: Int): String = x%2 match
+    case 0 => "Even"
     case _ => "Odd"
 
   println(f1(5)) //Odd
