@@ -3,8 +3,7 @@ package u02lab
 object Es3 extends App:
 
   println("Task 3a")
-  val f1: Int => String =
-    (x:Int) => x%2 match
+  val f1: Int => String = x => x%2 match
       case 0 => "Even"
       case 1 => "Odd"
 
@@ -31,7 +30,7 @@ object Es3 extends App:
   def negGenerics[X](fun: X => Boolean) : (X => Boolean) = s => !fun(s)
 
   val intToBool: Int => Boolean = _ == 1
-  val negInt: Int => Boolean = negGenerics[Int](intToBool)
+  val negInt: Int => Boolean = negGenerics(intToBool)
 
   println(negInt(1)) //false
   println(negInt(0)) //true
